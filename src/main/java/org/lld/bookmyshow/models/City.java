@@ -8,14 +8,10 @@ import java.util.List;
 
 @Setter
 @Getter
+@Entity
+public class City extends  BaseEntity{
 
-public class City {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
     String cityName;
-    String state;
-    int pincode;
     @OneToMany(mappedBy = "city", cascade = CascadeType.ALL, orphanRemoval = true)
     List<Theater> theaters;
 }

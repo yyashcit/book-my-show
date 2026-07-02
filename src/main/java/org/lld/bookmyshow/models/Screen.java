@@ -1,18 +1,24 @@
 package org.lld.bookmyshow.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
+import org.lld.bookmyshow.models.enums.ScreenStatus;
 
 import java.util.List;
 
 @Setter
 @Getter
-public class Screen {
+@Entity
+public class Screen extends  BaseEntity{
 
-    int id;
     String name;
+
+    @OneToMany
     List<Seat> seats;
-    int capacity;
+    ScreenStatus status;
+    //List<Feature>
 
 
 }

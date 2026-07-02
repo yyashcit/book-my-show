@@ -1,15 +1,13 @@
 package org.lld.bookmyshow.models;
 
-import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 import org.lld.bookmyshow.models.enums.SeatType;
 @Setter
 @Getter
-@Entity
-public class Seat extends  BaseEntity{
+public class ShowSeatType extends BaseEntity{
 
-    String seatName;
+    Show show;
     SeatType seatType;
-    String seatNumber;
+    int price;
 }

@@ -12,7 +12,7 @@ import java.util.List;
 @Setter
 @Getter
 @ToString
-public class Movie {
+public class Movie extends BaseEntity {
 
     int id;
     String name;
